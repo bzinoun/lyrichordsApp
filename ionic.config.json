@@ -1,4 +1,6 @@
 {
-  "name": "lyrichords",
-  "app_id": ""
+  "name": "lyrichordsApp",
+  "app_id": "",
+  "v2": true,
+  "typescript": true
 }
