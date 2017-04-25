@@ -7,12 +7,18 @@ import { Search } from '../search/search';
 })
 export class HomePage {
 
+lyricsDatas = [
+	{ artist : 'Lord', song : 'Royals', year : '2015'},
+	{ artist : 'Bruno Mars', song : 'Uptown Funk', year: '2015' },
+	{ artist : 'John Legend', song : 'All of me', year : '2016' }
+];
+
   constructor(public navCtrl: NavController) {
 
   }
 
-  searchLyrics () {
-  	this.navCtrl.push(Search);
+  searchLyrics (tempData) {
+  	this.navCtrl.push(Search, tempData);
   }
 
 }

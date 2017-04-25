@@ -6,5 +6,12 @@ Lyrichords - Malayalam    </ion-title>
 </ion-header>
 
 <ion-content padding>
-<button ion-button (click) = "searchLyrics()" color="dark" round>	Search for Lyrics</button>
+
+	<ion-card *ngFor="let lyricsData of lyricsDatas">
+	    <div class="card-title"> {{ lyricsData.artist }} </div>
+	    <div class="card-subtitle"> {{ lyricsData.song }} </div>
+	    <button ion-button (click) = "searchLyrics(lyricsData)" color="dark" round >	Search for Lyrics</button>
+  	</ion-card>
+
+
 </ion-content>

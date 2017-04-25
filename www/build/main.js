@@ -55474,18 +55474,18 @@ function SlideEdgeGesture_tsickle_Closure_declarations() {
 /* unused harmony reexport setupConfig */
 /* unused harmony reexport ConfigToken */
 /* unused harmony reexport DomController */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_22__platform_platform__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_22__platform_platform__["a"]; });
 /* unused harmony reexport setupPlatform */
 /* unused harmony reexport Haptic */
 /* unused harmony reexport DeepLinker */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_169__navigation_ionic_page__ = __webpack_require__(271);
 /* unused harmony reexport IonicPage */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_170__navigation_nav_controller__ = __webpack_require__(19);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_170__navigation_nav_controller__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_170__navigation_nav_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_171__navigation_nav_controller_base__ = __webpack_require__(47);
 /* unused harmony reexport NavControllerBase */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_172__navigation_nav_params__ = __webpack_require__(20);
-/* unused harmony reexport NavParams */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_172__navigation_nav_params__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_173__navigation_nav_util__ = __webpack_require__(25);
 /* unused harmony reexport DeepLinkMetadata */
 /* unused harmony reexport DeepLinkMetadataFactory */
@@ -57170,19 +57170,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
+        this.lyricsDatas = [
+            { artist: 'Lord', song: 'Royals', year: '2015' },
+            { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015' },
+            { artist: 'John Legend', song: 'All of me', year: '2016' }
+        ];
     }
-    HomePage.prototype.searchLyrics = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__search_search__["a" /* Search */]);
+    HomePage.prototype.searchLyrics = function (tempData) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__search_search__["a" /* Search */], tempData);
     };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\nLyrichords - Malayalam    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n<button ion-button (click) = "searchLyrics()" color="dark" round>	Search for Lyrics</button>\n</ion-content>\n'/*ion-inline-end:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\nLyrichords - Malayalam    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n	<ion-card *ngFor="let lyricsData of lyricsDatas">\n	    <div class="card-title"> {{ lyricsData.artist }} </div>\n	    <div class="card-subtitle"> {{ lyricsData.song }} </div>\n	    <button ion-button (click) = "searchLyrics(lyricsData)" color="dark" round >	Search for Lyrics</button>\n  	</ion-card>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object])
 ], HomePage);
 
+var _a;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -57191,6 +57197,7 @@ HomePage = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(95);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Search; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -57198,8 +57205,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 // import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
 /**
  * Generated class for the Search page.
  *
@@ -57208,16 +57219,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
  */
 // @IonicPage()
 var Search = (function () {
-    function Search() {
+    function Search(navParams) {
+        this.navParams = navParams;
     }
+    Search.prototype.ngOnInit = function () {
+        this.artist = this.navParams.get('artist');
+        this.year = this.navParams.get('year');
+        this.song = this.navParams.get('song');
+    };
     return Search;
 }());
 Search = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-search',template:/*ion-inline-start:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/search/search.html"*/'<!--\n  Generated template for the Search page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>search your Lyrics</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\nHey! Search here!\n</ion-content>\n'/*ion-inline-end:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/search/search.html"*/,
-    })
+        selector: 'page-search',template:/*ion-inline-start:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/search/search.html"*/'<!--\n  Generated template for the Search page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>search your Lyrics</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<h1>{{ artist }}</h1>\n<h2> {{song}} </h2>\n<p> {{year}} </p>\n</ion-content>\n'/*ion-inline-end:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/search/search.html"*/,
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavParams */]) === "function" && _a || Object])
 ], Search);
 
+var _a;
 //# sourceMappingURL=search.js.map
 
 /***/ }),
@@ -104469,7 +104488,7 @@ var MyApp = (function () {
 MyApp = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({template:/*ion-inline-start:"/Users/mithunnath-blogger/lyrichordsApp/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/mithunnath-blogger/lyrichordsApp/src/app/app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map

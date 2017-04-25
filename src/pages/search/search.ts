@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { NavParams } from 'ionic-angular';
 /**
  * Generated class for the Search page.
  *
@@ -13,6 +13,22 @@ import { Component } from '@angular/core';
   templateUrl: 'search.html',
 })
 export class Search {
+
+artist : string;
+year : number;
+song : string;
+
+constructor (private navParams: NavParams) {}
+
+ngOnInit(){
+
+	this.artist = this.navParams.get('artist');
+
+	this.year = this.navParams.get('year');
+
+	this.song = this.navParams.get('song');
+}
+
 
   // constructor(public navCtrl: NavController, public navParams: NavParams) {
   // }
