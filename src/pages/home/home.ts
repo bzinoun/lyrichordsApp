@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Search } from '../search/search';
+import { LoadingController } from 'ionic-angular';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -16,12 +18,23 @@ lyricsDatas = [
 	{ artist : 'John Legend', song : 'All of me', year : '2016' }
 ];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public loadCntrl: LoadingController) {
 
   }
 
   searchLyrics (tempData) {
-  	this.navCtrl.push(Search, tempData);
+  	// let loader = this.loadCntrl.create({
+   //    content: "Please wait...",
+   //    duration: 3000
+   //  });
+   //  loader.present();
+
+  	this.navCtrl.push(Search, tempData,
+  	{ //third argument is an object defining the animation of the navigation
+  		direction: 'forward', // default for push is 'forward'
+    	duration: 1000, // 1 seconds
+    	easing: 'ease-in'
+    });
   }
 
 }

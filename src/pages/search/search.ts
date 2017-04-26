@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 // import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
+
+import { LoadingController } from 'ionic-angular';
+
 /**
  * Generated class for the Search page.
  *
@@ -18,7 +21,7 @@ artist : string;
 year : number;
 song : string;
 
-constructor (private navParams: NavParams) {}
+constructor (private navParams: NavParams, public loadCntrl: LoadingController) {}
 
 ngOnInit(){
 

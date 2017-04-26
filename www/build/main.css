@@ -24312,3 +24312,15 @@ ion-navbar.toolbar {
     padding-top: calc(16px + 20px);
   }
 }
+
+.toolbar-background {
+  background-color: transparent;
+}
+
+.toolbar-md {
+  min-height: 75px;
+}
+
+.fixed-content {
+  /*	background-color:#000; */
+}
