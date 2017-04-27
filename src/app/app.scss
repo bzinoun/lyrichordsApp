@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Ubuntu');
+
 .toolbar-background{
-	background-color:transparent;	
+	background-color:transparent;
 }
 
 
@@ -9,4 +11,14 @@
 
 .fixed-content{
 	/*	background-color:#000; */
+}
+
+.tab-button{
+background-color: transparent;
+}
+
+.app-title{
+font-family: 'Ubuntu', sans-serif;
+font-size: 1.5em;
+color: black;
 }

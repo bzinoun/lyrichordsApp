@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 307:
+/***/ 309:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__favourites__ = __webpack_require__(309);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FavouritesModule", function() { return FavouritesModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__details__ = __webpack_require__(245);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailsModule", function() { return DetailsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var FavouritesModule = (function () {
-    function FavouritesModule() {
+var DetailsModule = (function () {
+    function DetailsModule() {
     }
-    return FavouritesModule;
+    return DetailsModule;
 }());
-FavouritesModule = __decorate([
+DetailsModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__favourites__["a" /* Favourites */],
+            __WEBPACK_IMPORTED_MODULE_2__details__["a" /* Details */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__favourites__["a" /* Favourites */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__details__["a" /* Details */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__favourites__["a" /* Favourites */]
+            __WEBPACK_IMPORTED_MODULE_2__details__["a" /* Details */]
         ]
     })
-], FavouritesModule);
+], DetailsModule);
 
-//# sourceMappingURL=favourites.module.js.map
+//# sourceMappingURL=details.module.js.map
 
 /***/ })
 

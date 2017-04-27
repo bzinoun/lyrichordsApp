@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald|Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Oswald|Ubuntu");
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -24323,4 +24325,46 @@ ion-navbar.toolbar {
 
 .fixed-content {
   /*	background-color:#000; */
+}
+
+.tab-button {
+  background-color: transparent;
+}
+
+.app-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5em;
+  color: black;
+}
+
+ion-card {
+  position: relative;
+  text-align: center;
+  height: auto;
+}
+
+ion-card .card-footer {
+  width: 100%;
+  height: 100px;
+}
+
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.card-title {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.card-subtitle {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: italic;
+}
+
+.app-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5em;
+  color: black;
 }

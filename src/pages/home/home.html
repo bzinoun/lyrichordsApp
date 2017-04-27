@@ -1,17 +1,71 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-Lyrichords - Malayalam    </ion-title>
+    <ion-title text-center>
+      <h1 class="app-title">
+        Lyrichords
+      </h1>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="card-background-page">
 
-	<ion-card *ngFor="let lyricsData of lyricsDatas">
-    <div class="card-title"> {{ lyricsData.artist }} </div>	    
+
+
+  <ion-card *ngFor="let lyricsData of lyricsDatas; let i = index;" (click)="searchLyrics(lyricsData)">
+    <!--     <img src="../../assets/images/bg{{i}}.jpg"/>
+ -->
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-sm-9 >
+          <h1 class="card-title">{{ lyricsData.artist }}</h1>
+          <h3 class="card-subtitle"> {{ lyricsData.song }}</h3>
+        </ion-col>
+        <ion-col col-sm-1 col-sm-offset-1>
+          <button
+          ion-button
+          large
+          class="arrow-btn">
+            <ion-icon name="arrow-dropright"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- <div class="card-footer">
+            <ion-grid>
+                <ion-row>
+                    <ion-col width-50 text-left>
+                        <button ion-button>Test</button>
+                    </ion-col>
+                    <ion-col width-50 text-right>
+                        <button ion-button>Test</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div> -->
+
+
+
+
+  </ion-card>
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-card *ngFor="let lyricsData of lyricsDatas">
+    <div class="card-title"> {{ lyricsData.artist }} </div>
     <div class="card-subtitle"> {{ lyricsData.song }} </div>
 	  <button ion-button (click) = "searchLyrics(lyricsData)" color="dark" round >	Search for Lyrics</button>
 	   <ion-icon name="heart"></ion-icon>
  	</ion-card>
-
-</ion-content>
+ -->
