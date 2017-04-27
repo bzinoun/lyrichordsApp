@@ -22,6 +22,8 @@ $font-path: "../assets/fonts";
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
+$navbar-background-color: #000;
+$navbar-background-text: #fff;
 
 $colors: (
   primary:    #488aff,

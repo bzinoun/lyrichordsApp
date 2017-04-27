@@ -15,6 +15,12 @@ export class HomePage {
     { artist: 'John Legend', song: 'All of me', year: '2016' },
     { artist: 'Lord', song: 'Royals', year: '2015' },
     { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015' },
+    { artist: 'John Legend', song: 'All of me', year: '2016' },
+    { artist: 'Lord', song: 'Royals', year: '2015' },
+    { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015' },
+    { artist: 'John Legend', song: 'All of me', year: '2016' },
+    { artist: 'Lord', song: 'Royals', year: '2015' },
+    { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015' },
     { artist: 'John Legend', song: 'All of me', year: '2016' }
   ];
 

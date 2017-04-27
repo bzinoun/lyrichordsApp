@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Ubuntu');
 
 .toolbar-background{
-	background-color:transparent;
+	background-color:black;
 }
 
 
@@ -14,11 +14,12 @@
 }
 
 .tab-button{
-background-color: transparent;
+background-color: black;
 }
 
-.app-title{
-font-family: 'Ubuntu', sans-serif;
-font-size: 1.5em;
-color: black;
+.card-md{
+	margin:0px 0px 0px 0px;
+	width:100%;
+	border-radius: 0px;
+	box-shadow: none;
 }

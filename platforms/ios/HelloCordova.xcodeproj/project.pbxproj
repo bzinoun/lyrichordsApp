@@ -21,6 +21,19 @@
 		493067D5A99348F2A19B2C9D /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9661DECF0E734AEB9C10B871 /* CDVViewController+SplashScreen.m */; };
 		025182743EF44874B948C131 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 91737675593F402D9D72281B /* CDVStatusBar.m */; };
 		D7518E49709347F3BF73ED19 /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = A985EF4BEE884BF783E63BD6 /* IonicKeyboard.m */; };
+		90712DB689B245A7B6F82026 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 400CED72597F4F5CB5978917 /* CDVFile.m */; };
+		24E5664529EA4C53A13EC0D2 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02B8FA7376C4E21B445C57E /* CDVLocalFilesystem.m */; };
+		6D6B14CCDE6C407F940A536C /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C5E4AE01C4371B7F35576 /* CDVAssetLibraryFilesystem.m */; };
+		62A3C02392D6472689395EFB /* CordovaHttpPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F3D00076F4481AEE753A7 /* CordovaHttpPlugin.m */; };
+		E129FE5664DB401C93EB650B /* TextResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3ED58AEACA04750A6AFE477 /* TextResponseSerializer.m */; };
+		48F046D2EBF5414D873607E3 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67282EBDF4BB44E2AEB02546 /* AFHTTPSessionManager.m */; };
+		D91BFA1AD9FC48CB92A192CB /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F552F460EB4290B718F975 /* AFNetworkReachabilityManager.m */; };
+		68C41BC2AD6E486CA5C9A199 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = A738A09D3DB64EAD804D7ADD /* AFSecurityPolicy.m */; };
+		53E4196B2D914E04BA4FEC3D /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D86C40B7C64F849E960189 /* AFURLRequestSerialization.m */; };
+		330CDB1696AD484FB3EB1DC6 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A392682A2141CA84998A8E /* AFURLResponseSerialization.m */; };
+		3C5B25D2296D4AC4A6BE6E25 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 839073E604F94E2188A18ACD /* AFURLSessionManager.m */; };
+		781131A5F85C4C41881BB236 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66AFF14C07946C8AA59A35A /* Security.framework */; };
+		8A85594128EE4D188BF741FE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7118181254E64E9B9F5CA3B2 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +85,31 @@
 		40D70F66B10645B4828A46FD /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		A985EF4BEE884BF783E63BD6 /* IonicKeyboard.m */ = {isa = PBXFileReference; name = "IonicKeyboard.m"; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		6FCC7CBBC2E64C3BAA5A4DE7 /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		400CED72597F4F5CB5978917 /* CDVFile.m */ = {isa = PBXFileReference; name = "CDVFile.m"; path = "cordova-plugin-file/CDVFile.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		D02B8FA7376C4E21B445C57E /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; name = "CDVLocalFilesystem.m"; path = "cordova-plugin-file/CDVLocalFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		5F2C5E4AE01C4371B7F35576 /* CDVAssetLibraryFilesystem.m */ = {isa = PBXFileReference; name = "CDVAssetLibraryFilesystem.m"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E062395731D54262B89B3C37 /* CDVFile.h */ = {isa = PBXFileReference; name = "CDVFile.h"; path = "cordova-plugin-file/CDVFile.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		EEEB43937B6C4DE1B871E966 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; name = "CDVLocalFilesystem.h"; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		45E704298A2A42669E1F26D0 /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; name = "CDVAssetLibraryFilesystem.h"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		EA7F3D00076F4481AEE753A7 /* CordovaHttpPlugin.m */ = {isa = PBXFileReference; name = "CordovaHttpPlugin.m"; path = "cordova-plugin-http/CordovaHttpPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F3ED58AEACA04750A6AFE477 /* TextResponseSerializer.m */ = {isa = PBXFileReference; name = "TextResponseSerializer.m"; path = "cordova-plugin-http/TextResponseSerializer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		67282EBDF4BB44E2AEB02546 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; name = "AFHTTPSessionManager.m"; path = "cordova-plugin-http/AFHTTPSessionManager.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		D6F552F460EB4290B718F975 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; name = "AFNetworkReachabilityManager.m"; path = "cordova-plugin-http/AFNetworkReachabilityManager.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		A738A09D3DB64EAD804D7ADD /* AFSecurityPolicy.m */ = {isa = PBXFileReference; name = "AFSecurityPolicy.m"; path = "cordova-plugin-http/AFSecurityPolicy.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		43D86C40B7C64F849E960189 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; name = "AFURLRequestSerialization.m"; path = "cordova-plugin-http/AFURLRequestSerialization.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		82A392682A2141CA84998A8E /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; name = "AFURLResponseSerialization.m"; path = "cordova-plugin-http/AFURLResponseSerialization.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		839073E604F94E2188A18ACD /* AFURLSessionManager.m */ = {isa = PBXFileReference; name = "AFURLSessionManager.m"; path = "cordova-plugin-http/AFURLSessionManager.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		8ADCD9973C5742AD829D513A /* CordovaHttpPlugin.h */ = {isa = PBXFileReference; name = "CordovaHttpPlugin.h"; path = "cordova-plugin-http/CordovaHttpPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E06C3F2484854517B15AB377 /* TextResponseSerializer.h */ = {isa = PBXFileReference; name = "TextResponseSerializer.h"; path = "cordova-plugin-http/TextResponseSerializer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		263750863D5C44928EE556F3 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; name = "AFHTTPSessionManager.h"; path = "cordova-plugin-http/AFHTTPSessionManager.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		4E0C73CA14A4406296D68A68 /* AFNetworking.h */ = {isa = PBXFileReference; name = "AFNetworking.h"; path = "cordova-plugin-http/AFNetworking.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		6418D3FA1FD6479CA43C5668 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; name = "AFNetworkReachabilityManager.h"; path = "cordova-plugin-http/AFNetworkReachabilityManager.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		37872A304CA3413EA1D1C0F5 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; name = "AFSecurityPolicy.h"; path = "cordova-plugin-http/AFSecurityPolicy.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		AED9BB44D9BC4E9A88201058 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; name = "AFURLRequestSerialization.h"; path = "cordova-plugin-http/AFURLRequestSerialization.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		D46301C81E87406AA4D88C98 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; name = "AFURLResponseSerialization.h"; path = "cordova-plugin-http/AFURLResponseSerialization.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		439F79FB3FC2455CA1BD4403 /* AFURLSessionManager.h */ = {isa = PBXFileReference; name = "AFURLSessionManager.h"; path = "cordova-plugin-http/AFURLSessionManager.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		A66AFF14C07946C8AA59A35A /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		7118181254E64E9B9F5CA3B2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +118,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				781131A5F85C4C41881BB236 /* Security.framework in Frameworks */,
+				8A85594128EE4D188BF741FE /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +189,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A66AFF14C07946C8AA59A35A /* Security.framework */,
+				7118181254E64E9B9F5CA3B2 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,6 +228,29 @@
 				40D70F66B10645B4828A46FD /* CDVStatusBar.h */,
 				A985EF4BEE884BF783E63BD6 /* IonicKeyboard.m */,
 				6FCC7CBBC2E64C3BAA5A4DE7 /* IonicKeyboard.h */,
+				400CED72597F4F5CB5978917 /* CDVFile.m */,
+				D02B8FA7376C4E21B445C57E /* CDVLocalFilesystem.m */,
+				5F2C5E4AE01C4371B7F35576 /* CDVAssetLibraryFilesystem.m */,
+				E062395731D54262B89B3C37 /* CDVFile.h */,
+				EEEB43937B6C4DE1B871E966 /* CDVLocalFilesystem.h */,
+				45E704298A2A42669E1F26D0 /* CDVAssetLibraryFilesystem.h */,
+				EA7F3D00076F4481AEE753A7 /* CordovaHttpPlugin.m */,
+				F3ED58AEACA04750A6AFE477 /* TextResponseSerializer.m */,
+				67282EBDF4BB44E2AEB02546 /* AFHTTPSessionManager.m */,
+				D6F552F460EB4290B718F975 /* AFNetworkReachabilityManager.m */,
+				A738A09D3DB64EAD804D7ADD /* AFSecurityPolicy.m */,
+				43D86C40B7C64F849E960189 /* AFURLRequestSerialization.m */,
+				82A392682A2141CA84998A8E /* AFURLResponseSerialization.m */,
+				839073E604F94E2188A18ACD /* AFURLSessionManager.m */,
+				8ADCD9973C5742AD829D513A /* CordovaHttpPlugin.h */,
+				E06C3F2484854517B15AB377 /* TextResponseSerializer.h */,
+				263750863D5C44928EE556F3 /* AFHTTPSessionManager.h */,
+				4E0C73CA14A4406296D68A68 /* AFNetworking.h */,
+				6418D3FA1FD6479CA43C5668 /* AFNetworkReachabilityManager.h */,
+				37872A304CA3413EA1D1C0F5 /* AFSecurityPolicy.h */,
+				AED9BB44D9BC4E9A88201058 /* AFURLRequestSerialization.h */,
+				D46301C81E87406AA4D88C98 /* AFURLResponseSerialization.h */,
+				439F79FB3FC2455CA1BD4403 /* AFURLSessionManager.h */,
 			);
 			name = Plugins;
 			path = "HelloCordova/Plugins";
@@ -306,6 +371,17 @@
 				493067D5A99348F2A19B2C9D /* CDVViewController+SplashScreen.m in Sources */,
 				025182743EF44874B948C131 /* CDVStatusBar.m in Sources */,
 				D7518E49709347F3BF73ED19 /* IonicKeyboard.m in Sources */,
+				90712DB689B245A7B6F82026 /* CDVFile.m in Sources */,
+				24E5664529EA4C53A13EC0D2 /* CDVLocalFilesystem.m in Sources */,
+				6D6B14CCDE6C407F940A536C /* CDVAssetLibraryFilesystem.m in Sources */,
+				62A3C02392D6472689395EFB /* CordovaHttpPlugin.m in Sources */,
+				E129FE5664DB401C93EB650B /* TextResponseSerializer.m in Sources */,
+				48F046D2EBF5414D873607E3 /* AFHTTPSessionManager.m in Sources */,
+				D91BFA1AD9FC48CB92A192CB /* AFNetworkReachabilityManager.m in Sources */,
+				68C41BC2AD6E486CA5C9A199 /* AFSecurityPolicy.m in Sources */,
+				53E4196B2D914E04BA4FEC3D /* AFURLRequestSerialization.m in Sources */,
+				330CDB1696AD484FB3EB1DC6 /* AFURLResponseSerialization.m in Sources */,
+				3C5B25D2296D4AC4A6BE6E25 /* AFURLSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

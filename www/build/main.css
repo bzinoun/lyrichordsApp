@@ -24316,7 +24316,7 @@ ion-navbar.toolbar {
 }
 
 .toolbar-background {
-  background-color: transparent;
+  background-color: black;
 }
 
 .toolbar-md {
@@ -24328,13 +24328,14 @@ ion-navbar.toolbar {
 }
 
 .tab-button {
-  background-color: transparent;
+  background-color: black;
 }
 
-.app-title {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.5em;
-  color: black;
+.card-md {
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+  border-radius: 0px;
+  box-shadow: none;
 }
 
 ion-card {
@@ -24366,5 +24367,14 @@ ion-card .card-footer {
 .app-title {
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.5em;
-  color: black;
+  color: white;
+}
+
+.card-bg {
+  background: linear-gradient(to bottom right, #e59866, #fbeee6);
+  border-bottom: 1px solid #979696;
+}
+
+.hearT {
+  color: red;
 }

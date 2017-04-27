@@ -45125,7 +45125,7 @@ var Search = (function () {
         this.artist = this.navParams.get('artist');
         this.year = this.navParams.get('year');
         this.song = this.navParams.get('song');
-        // this.song = this.navParams.data; 
+        // this.song = this.navParams.data;
         //-- this will exactly pull the object as it is and we can use it with dot (.) operator
         // like this : this temp = data; then: {{temp.song}}
     };
@@ -57349,6 +57349,12 @@ var HomePage = (function () {
             { artist: 'John Legend', song: 'All of me', year: '2016' },
             { artist: 'Lord', song: 'Royals', year: '2015' },
             { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015' },
+            { artist: 'John Legend', song: 'All of me', year: '2016' },
+            { artist: 'Lord', song: 'Royals', year: '2015' },
+            { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015' },
+            { artist: 'John Legend', song: 'All of me', year: '2016' },
+            { artist: 'Lord', song: 'Royals', year: '2015' },
+            { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015' },
             { artist: 'John Legend', song: 'All of me', year: '2016' }
         ];
     }
@@ -57368,7 +57374,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>\n      <h1 class="app-title">\n        Lyrichords\n      </h1>\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card-background-page">\n\n\n\n  <ion-card *ngFor="let lyricsData of lyricsDatas; let i = index;" (click)="searchLyrics(lyricsData)">\n    <!--     <img src="../../assets/images/bg{{i}}.jpg"/>\n -->\n\n    <ion-grid>\n      <ion-row>\n        <ion-col col-sm-9 >\n          <h1 class="card-title">{{ lyricsData.artist }}</h1>\n          <h3 class="card-subtitle"> {{ lyricsData.song }}</h3>\n        </ion-col>\n        <ion-col col-sm-1 col-sm-offset-1>\n          <button\n          ion-button\n          large\n          class="arrow-btn">\n            <ion-icon name="arrow-dropright"></ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n\n    <!-- <div class="card-footer">\n            <ion-grid>\n                <ion-row>\n                    <ion-col width-50 text-left>\n                        <button ion-button>Test</button>\n                    </ion-col>\n                    <ion-col width-50 text-right>\n                        <button ion-button>Test</button>\n                    </ion-col>\n                </ion-row>\n            </ion-grid>\n        </div> -->\n\n\n\n\n  </ion-card>\n\n</ion-content>\n\n\n\n\n\n\n\n\n\n\n<!-- <ion-card *ngFor="let lyricsData of lyricsDatas">\n    <div class="card-title"> {{ lyricsData.artist }} </div>\n    <div class="card-subtitle"> {{ lyricsData.song }} </div>\n	  <button ion-button (click) = "searchLyrics(lyricsData)" color="dark" round >	Search for Lyrics</button>\n	   <ion-icon name="heart"></ion-icon>\n 	</ion-card>\n -->\n'/*ion-inline-end:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>\n      <h1 class="app-title">\n        Lyrichords\n      </h1>\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card-background-page">\n\n\n\n  <ion-card\n  *ngFor="let lyricsData of lyricsDatas; let i = index;"\n  (click)="searchLyrics(lyricsData)">\n    <!--     <img src="../../assets/images/bg{{i}}.jpg"/>\n -->\n    <ion-grid\n    class="card-bg">\n      <ion-row>\n        <ion-col col-80 >\n          <h1 class="card-title">{{ lyricsData.artist }}</h1>\n          <h3 class="card-subtitle"> {{ lyricsData.song }}</h3>\n        </ion-col>\n        <!-- <ion-col col-sm-1>\n          <button ion-button large class="arrow-btn">\n            <ion-icon name="arrow-dropright"></ion-icon>\n          </button>\n        </ion-col> -->\n        <ion-col col-sm-1>\n          <button ion-button large class="arrow-btn" color = light>\n            <ion-icon name="heart" class="hearT"></ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n\n    <!-- <div class="card-footer">\n            <ion-grid>\n                <ion-row>\n                    <ion-col width-50 text-left>\n                        <button ion-button>Test</button>\n                    </ion-col>\n                    <ion-col width-50 text-right>\n                        <button ion-button>Test</button>\n                    </ion-col>\n                </ion-row>\n            </ion-grid>\n        </div> -->\n\n\n\n\n  </ion-card>\n\n</ion-content>\n\n\n\n\n\n\n\n\n\n\n<!-- <ion-card *ngFor="let lyricsData of lyricsDatas">\n    <div class="card-title"> {{ lyricsData.artist }} </div>\n    <div class="card-subtitle"> {{ lyricsData.song }} </div>\n	  <button ion-button (click) = "searchLyrics(lyricsData)" color="dark" round >	Search for Lyrics</button>\n	   <ion-icon name="heart"></ion-icon>\n 	</ion-card>\n -->\n'/*ion-inline-end:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */]])
 ], HomePage);

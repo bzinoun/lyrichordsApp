@@ -4,6 +4,7 @@ ion-card {
   position: relative;
   text-align: center;
   height: auto;
+
 }
 
 ion-card {
@@ -28,5 +29,14 @@ font-style: italic;
 .app-title{
 font-family: 'Ubuntu', sans-serif;
 font-size: 1.5em;
-color: black;
+color: white;
+}
+
+.card-bg{
+  background: linear-gradient(to bottom right, #e59866, #fbeee6);
+  border-bottom: 1px solid #979696;
+}
+
+.hearT{
+  color: red;
 }
