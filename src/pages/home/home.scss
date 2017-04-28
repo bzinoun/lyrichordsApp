@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald|Ubuntu');
+@import url( 'https://fonts.googleapis.com/css?family=Roboto');
 
 ion-card {
   position: relative;
   text-align: center;
   height: 101.5px;
-
 }
 
 ion-card {
@@ -14,58 +13,77 @@ ion-card {
   }
 }
 
-.arrow-btn{
-width:40px;
-height:40px;
-border-radius: 50px;
-}
-.card-title{
-font-family: 'Ubuntu', sans-serif;
-}
-.card-subtitle{
-font-family: 'Ubuntu', sans-serif;
-font-style: italic;
-}
-.app-title{
-font-family: 'Ubuntu', sans-serif;
-font-size: 1.5em;
-color: white;
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
 }
 
-
-.hearT{
-  color: red;
+.music-note {
+  color: white;
+  font-size: 30px;
 }
 
+ion-card {
+  .card-title {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 
-.style0{
+  .card-subtitle {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.app-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  color: #ff9900;
+}
+
+.hearT {
+  color: white;
+  font-size: 25px;
+}
+
+.style0 {
   //background: linear-gradient(to bottom right, #e59866, #fbeee6);
   background-image: url('../../assets/images/bg1.png');
   height: 100%;
+  padding-top: 25px;
 }
 
-.style1{
+.style1 {
   //background: linear-gradient(to bottom right, #fff, #000);
-    background-image: url('../../assets/images/bg2.png');
-      height: 100%;
+  background-image: url('../../assets/images/bg2.png');
+  height: 100%;
+  padding-top: 25px;
 }
 
-
-.style2{
+.style2 {
   //background: linear-gradient(to bottom right, red, green);
-    background-image: url('../../assets/images/bg3.png');
-      height: 100%;
+  background-image: url('../../assets/images/bg3.png');
+  height: 100%;
+  padding-top: 25px;
 }
 
-
-.style3{
+.style3 {
   //background: linear-gradient(to bottom right, yellow, cyan);
-    background-image: url('../../assets/images/bg4.png');
-      height: 100%;
+  background-image: url('../../assets/images/bg4.png');
+  height: 100%;
+  padding-top: 25px;
 }
 
-.style4{
+.style4 {
   //background: linear-gradient(to bottom right, black, red);
-    background-image: url('../../assets/images/bg5.png');
-      height: 100%;
+  background-image: url('../../assets/images/bg5.png');
+  height: 100%;
+  padding-top: 25px;
 }

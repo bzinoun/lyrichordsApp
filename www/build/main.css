@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald|Ubuntu");
-@import url("https://fonts.googleapis.com/css?family=Oswald|Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -24317,6 +24316,7 @@ ion-navbar.toolbar {
 
 .toolbar-background {
   background-color: black;
+  opacity: 0.85;
 }
 
 .toolbar-md {
@@ -24328,19 +24328,27 @@ ion-navbar.toolbar {
 }
 
 .tab-button {
-  background-color: black;
+  background-color: white;
 }
 
 .card-md {
-  margin: 0px 0px 0px 0px;
+  margin: 0;
   width: 100%;
-  border-radius: 0px;
+  border-radius: 0;
   box-shadow: none;
 }
 
 .back-button-icon-md {
   color: white;
   font-weight: bolder;
+}
+
+.ion-md-home:before {
+  color: #ff9900;
+}
+
+.tab-button-text {
+  color: #ff9900;
 }
 
 ion-card {
@@ -24360,46 +24368,64 @@ ion-card .card-footer {
   border-radius: 50px;
 }
 
-.card-title {
-  font-family: 'Ubuntu', sans-serif;
+.music-note {
+  color: white;
+  font-size: 30px;
 }
 
-.card-subtitle {
-  font-family: 'Ubuntu', sans-serif;
-  font-style: italic;
+ion-card .card-title {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+ion-card .card-subtitle {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .app-title {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.5em;
-  color: white;
+  color: #ff9900;
 }
 
 .hearT {
-  color: red;
+  color: white;
+  font-size: 25px;
 }
 
 .style0 {
   background-image: url("../../assets/images/bg1.png");
   height: 100%;
+  padding-top: 25px;
 }
 
 .style1 {
   background-image: url("../../assets/images/bg2.png");
   height: 100%;
+  padding-top: 25px;
 }
 
 .style2 {
   background-image: url("../../assets/images/bg3.png");
   height: 100%;
+  padding-top: 25px;
 }
 
 .style3 {
   background-image: url("../../assets/images/bg4.png");
   height: 100%;
+  padding-top: 25px;
 }
 
 .style4 {
   background-image: url("../../assets/images/bg5.png");
   height: 100%;
+  padding-top: 25px;
 }

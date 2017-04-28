@@ -1,30 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald|Ubuntu');
-
-.toolbar-background{
-	background-color:black;
+.toolbar-background {
+	background-color: black;
+	opacity: 0.85;
 }
 
-
-.toolbar-md{
-	min-height:75px;
+.toolbar-md {
+	min-height: 75px;
 }
 
-.fixed-content{
+.fixed-content {
 	/*	background-color:#000; */
 }
 
-.tab-button{
-background-color: black;
+.tab-button {
+	background-color: white;
 }
 
-.card-md{
-	margin:0px 0px 0px 0px;
-	width:100%;
-	border-radius: 0px;
+.card-md {
+	margin: 0;
+	width: 100%;
+	border-radius: 0;
 	box-shadow: none;
 }
 
-.back-button-icon-md{
-	color:white;
-	font-weight:bolder;
+.back-button-icon-md {
+	color: white;
+	font-weight: bolder;
+}
+
+.ion-md-home:before {
+	color: #ff9900;
+}
+// .ion-md-home{
+// 	color:#ff9900;
+// }
+
+.tab-button-text {
+	color: #ff9900;
 }

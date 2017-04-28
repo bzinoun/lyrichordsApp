@@ -2,7 +2,7 @@
   <ion-navbar>
     <ion-title text-center>
       <h1 class="app-title">
-        Lyrichords
+        LyRICHORDS
       </h1>
     </ion-title>
   </ion-navbar>
@@ -12,12 +12,10 @@
 
 
 
-  <ion-card
-  *ngFor="let lyricsData of lyricsDatas; let i = index;">
+  <ion-card *ngFor="let lyricsData of lyricsDatas; let i = index;">
     <!--     <img src="../../assets/images/bg{{i}}.jpg"/>
  -->
-    <ion-grid
-    [ngClass]="{
+    <ion-grid [ngClass]="{
       style0: (i%5) === 0,
       style1: (i%5) === 1,
       style2: (i%5) === 2,
@@ -26,7 +24,7 @@
       <ion-row>
 
         <ion-col col-1 (click)="searchLyrics(lyricsData)">
-            <ion-icon name="md-musical-note" style="font-size:25px;"></ion-icon>
+          <ion-icon name="md-musical-note" class="music-note"></ion-icon>
         </ion-col>
 
         <ion-col col-9 (click)="searchLyrics(lyricsData)">
@@ -39,9 +37,9 @@
           </button>
         </ion-col> -->
         <ion-col col-1>
-          <button ion-button large class="arrow-btn" color = light>
-            <ion-icon name="heart"></ion-icon>
-          </button>
+          <!-- <button ion-button large class="arrow-btn" color = light> -->
+          <ion-icon name="heart" class="hearT"></ion-icon>
+          <!-- </button> -->
         </ion-col>
       </ion-row>
     </ion-grid>
