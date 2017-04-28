@@ -8,8 +8,6 @@ import { Favourites } from '../favourites/favourites';
   template: `
 <ion-tabs>
 	<ion-tab [root] = "homePage" tabTitle="Home" tabIcon="home"></ion-tab>
-	<ion-tab [root] = "searchPage" tabTitle="Search" tabIcon="search"></ion-tab>
-	<ion-tab [root] = "favouritePage" tabTitle="Favourites" tabIcon="heart"></ion-tab>
 
 </ion-tabs>
   `
@@ -17,6 +15,10 @@ import { Favourites } from '../favourites/favourites';
 export class Tabs {
 
   homePage = HomePage;
-  searchPage = Search;
-  favouritePage = Favourites;
+//  searchPage = Search;
+//<ion-tab [root] = "searchPage" tabTitle="Search" tabIcon="search"></ion-tab>
+
+  // favouritePage = Favourites;
+  //<ion-tab [root] = "favouritePage" tabTitle="Favourites" tabIcon="heart"></ion-tab>
+
 }

@@ -32,11 +32,31 @@ font-size: 1.5em;
 color: white;
 }
 
-.card-bg{
-  background: linear-gradient(to bottom right, #e59866, #fbeee6);
-  border-bottom: 1px solid #979696;
-}
 
 .hearT{
   color: red;
+}
+
+
+.style0{
+  //background: linear-gradient(to bottom right, #e59866, #fbeee6);
+  background-image: url('../../assets/images/bg1.jpg');
+}
+
+.style1{
+  background: linear-gradient(to bottom right, #fff, #000);
+}
+
+
+.style2{
+  background: linear-gradient(to bottom right, red, green);
+}
+
+
+.style3{
+  background: linear-gradient(to bottom right, yellow, cyan);
+}
+
+.style4{
+  background: linear-gradient(to bottom right, black, red);
 }

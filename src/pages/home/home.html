@@ -13,25 +13,34 @@
 
 
   <ion-card
-  *ngFor="let lyricsData of lyricsDatas; let i = index;"
-  (click)="searchLyrics(lyricsData)">
+  *ngFor="let lyricsData of lyricsDatas; let i = index;">
     <!--     <img src="../../assets/images/bg{{i}}.jpg"/>
  -->
     <ion-grid
-    class="card-bg">
+    [ngClass]="{
+      style0: (i%5) === 0,
+      style1: (i%5) === 1,
+      style2: (i%5) === 2,
+      style3: (i%5) === 3,
+      style4: (i%5) === 4}">
       <ion-row>
-        <ion-col col-80 >
-          <h1 class="card-title">{{ lyricsData.artist }}</h1>
-          <h3 class="card-subtitle"> {{ lyricsData.song }}</h3>
+
+        <ion-col col-1 (click)="searchLyrics(lyricsData)">
+            <ion-icon name="md-musical-note" style="font-size:25px;"></ion-icon>
+        </ion-col>
+
+        <ion-col col-9 (click)="searchLyrics(lyricsData)">
+          <h1 text-left class="card-title">{{ lyricsData.artist }}</h1>
+          <h3 text-left class="card-subtitle"> {{ lyricsData.song }}</h3>
         </ion-col>
         <!-- <ion-col col-sm-1>
           <button ion-button large class="arrow-btn">
             <ion-icon name="arrow-dropright"></ion-icon>
           </button>
         </ion-col> -->
-        <ion-col col-sm-1>
+        <ion-col col-1>
           <button ion-button large class="arrow-btn" color = light>
-            <ion-icon name="heart" class="hearT"></ion-icon>
+            <ion-icon name="heart"></ion-icon>
           </button>
         </ion-col>
       </ion-row>

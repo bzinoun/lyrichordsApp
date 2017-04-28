@@ -57374,7 +57374,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>\n      <h1 class="app-title">\n        Lyrichords\n      </h1>\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card-background-page">\n\n\n\n  <ion-card\n  *ngFor="let lyricsData of lyricsDatas; let i = index;"\n  (click)="searchLyrics(lyricsData)">\n    <!--     <img src="../../assets/images/bg{{i}}.jpg"/>\n -->\n    <ion-grid\n    class="card-bg">\n      <ion-row>\n        <ion-col col-80 >\n          <h1 class="card-title">{{ lyricsData.artist }}</h1>\n          <h3 class="card-subtitle"> {{ lyricsData.song }}</h3>\n        </ion-col>\n        <!-- <ion-col col-sm-1>\n          <button ion-button large class="arrow-btn">\n            <ion-icon name="arrow-dropright"></ion-icon>\n          </button>\n        </ion-col> -->\n        <ion-col col-sm-1>\n          <button ion-button large class="arrow-btn" color = light>\n            <ion-icon name="heart" class="hearT"></ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n\n    <!-- <div class="card-footer">\n            <ion-grid>\n                <ion-row>\n                    <ion-col width-50 text-left>\n                        <button ion-button>Test</button>\n                    </ion-col>\n                    <ion-col width-50 text-right>\n                        <button ion-button>Test</button>\n                    </ion-col>\n                </ion-row>\n            </ion-grid>\n        </div> -->\n\n\n\n\n  </ion-card>\n\n</ion-content>\n\n\n\n\n\n\n\n\n\n\n<!-- <ion-card *ngFor="let lyricsData of lyricsDatas">\n    <div class="card-title"> {{ lyricsData.artist }} </div>\n    <div class="card-subtitle"> {{ lyricsData.song }} </div>\n	  <button ion-button (click) = "searchLyrics(lyricsData)" color="dark" round >	Search for Lyrics</button>\n	   <ion-icon name="heart"></ion-icon>\n 	</ion-card>\n -->\n'/*ion-inline-end:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title text-center>\n      <h1 class="app-title">\n        Lyrichords\n      </h1>\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card-background-page">\n\n\n\n  <ion-card\n  *ngFor="let lyricsData of lyricsDatas; let i = index;">\n    <!--     <img src="../../assets/images/bg{{i}}.jpg"/>\n -->\n    <ion-grid\n    [ngClass]="{\n      style0: (i%5) === 0,\n      style1: (i%5) === 1,\n      style2: (i%5) === 2,\n      style3: (i%5) === 3,\n      style4: (i%5) === 4}">\n      <ion-row>\n\n        <ion-col col-1 (click)="searchLyrics(lyricsData)">\n            <ion-icon name="md-musical-note" style="font-size:25px;"></ion-icon>\n        </ion-col>\n\n        <ion-col col-9 (click)="searchLyrics(lyricsData)">\n          <h1 text-left class="card-title">{{ lyricsData.artist }}</h1>\n          <h3 text-left class="card-subtitle"> {{ lyricsData.song }}</h3>\n        </ion-col>\n        <!-- <ion-col col-sm-1>\n          <button ion-button large class="arrow-btn">\n            <ion-icon name="arrow-dropright"></ion-icon>\n          </button>\n        </ion-col> -->\n        <ion-col col-1>\n          <button ion-button large class="arrow-btn" color = light>\n            <ion-icon name="heart"></ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n\n    <!-- <div class="card-footer">\n            <ion-grid>\n                <ion-row>\n                    <ion-col width-50 text-left>\n                        <button ion-button>Test</button>\n                    </ion-col>\n                    <ion-col width-50 text-right>\n                        <button ion-button>Test</button>\n                    </ion-col>\n                </ion-row>\n            </ion-grid>\n        </div> -->\n\n\n\n\n  </ion-card>\n\n</ion-content>\n\n\n\n\n\n\n\n\n\n\n<!-- <ion-card *ngFor="let lyricsData of lyricsDatas">\n    <div class="card-title"> {{ lyricsData.artist }} </div>\n    <div class="card-subtitle"> {{ lyricsData.song }} </div>\n	  <button ion-button (click) = "searchLyrics(lyricsData)" color="dark" round >	Search for Lyrics</button>\n	   <ion-icon name="heart"></ion-icon>\n 	</ion-card>\n -->\n'/*ion-inline-end:"/Users/mithunnath-blogger/lyrichordsApp/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */]])
 ], HomePage);
@@ -57388,8 +57388,6 @@ HomePage = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search_search__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__favourites_favourites__ = __webpack_require__(103);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Tabs; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -57399,20 +57397,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 
 
-
-
 var Tabs = (function () {
     function Tabs() {
         this.homePage = __WEBPACK_IMPORTED_MODULE_1__home_home__["a" /* HomePage */];
-        this.searchPage = __WEBPACK_IMPORTED_MODULE_2__search_search__["a" /* Search */];
-        this.favouritePage = __WEBPACK_IMPORTED_MODULE_3__favourites_favourites__["a" /* Favourites */];
+        //  searchPage = Search;
+        //<ion-tab [root] = "searchPage" tabTitle="Search" tabIcon="search"></ion-tab>
+        // favouritePage = Favourites;
+        //<ion-tab [root] = "favouritePage" tabTitle="Favourites" tabIcon="heart"></ion-tab>
     }
     return Tabs;
 }());
 Tabs = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
         selector: 'page-tabs',
-        template: "\n<ion-tabs>\n\t<ion-tab [root] = \"homePage\" tabTitle=\"Home\" tabIcon=\"home\"></ion-tab>\n\t<ion-tab [root] = \"searchPage\" tabTitle=\"Search\" tabIcon=\"search\"></ion-tab>\n\t<ion-tab [root] = \"favouritePage\" tabTitle=\"Favourites\" tabIcon=\"heart\"></ion-tab>\n\n</ion-tabs>\n  "
+        template: "\n<ion-tabs>\n\t<ion-tab [root] = \"homePage\" tabTitle=\"Home\" tabIcon=\"home\"></ion-tab>\n\n</ion-tabs>\n  "
     })
 ], Tabs);
 
