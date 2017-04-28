@@ -3,7 +3,7 @@
 ion-card {
   position: relative;
   text-align: center;
-  height: auto;
+  height: 101.5px;
 
 }
 
@@ -40,23 +40,32 @@ color: white;
 
 .style0{
   //background: linear-gradient(to bottom right, #e59866, #fbeee6);
-  background-image: url('../../assets/images/bg1.jpg');
+  background-image: url('../../assets/images/bg1.png');
+  height: 100%;
 }
 
 .style1{
-  background: linear-gradient(to bottom right, #fff, #000);
+  //background: linear-gradient(to bottom right, #fff, #000);
+    background-image: url('../../assets/images/bg2.png');
+      height: 100%;
 }
 
 
 .style2{
-  background: linear-gradient(to bottom right, red, green);
+  //background: linear-gradient(to bottom right, red, green);
+    background-image: url('../../assets/images/bg3.png');
+      height: 100%;
 }
 
 
 .style3{
-  background: linear-gradient(to bottom right, yellow, cyan);
+  //background: linear-gradient(to bottom right, yellow, cyan);
+    background-image: url('../../assets/images/bg4.png');
+      height: 100%;
 }
 
 .style4{
-  background: linear-gradient(to bottom right, black, red);
+  //background: linear-gradient(to bottom right, black, red);
+    background-image: url('../../assets/images/bg5.png');
+      height: 100%;
 }
