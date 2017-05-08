@@ -27,6 +27,9 @@
         },
         "cordova-plugin-http": {
             "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.lyrichordsapp138205"
         }
     },
     "dependent_plugins": {

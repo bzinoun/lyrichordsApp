@@ -12,7 +12,8 @@
 
 
 
-  <ion-card *ngFor="let lyricsData of lyricsDatas; let i = index;">
+  <ion-card *ngFor="let lyricsData of lyricsDatas; let i = index;"
+  class="card-md-home">
     <!--     <img src="../../assets/images/bg{{i}}.jpg"/>
  -->
     <ion-grid [ngClass]="{
@@ -38,7 +39,11 @@
         </ion-col> -->
         <ion-col col-1>
           <!-- <button ion-button large class="arrow-btn" color = light> -->
-          <ion-icon name="heart" class="hearT"></ion-icon>
+          <ion-icon
+          name="heart"
+          class="hearT"
+          (click) = "makeFav(lyricsData)"
+          ></ion-icon>
           <!-- </button> -->
         </ion-col>
       </ion-row>

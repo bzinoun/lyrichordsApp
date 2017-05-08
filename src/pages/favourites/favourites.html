@@ -19,4 +19,15 @@
 
 <ion-content padding>
 
+<button ion-button (click) = "serverDataCall()" > get lyrics</button>
+<ion-grid *ngIf="lyrics && lyrics.items">
+           <ion-row *ngFor="let data of lyrics.items">
+            <ion-col col-12>
+             <h1>{{data.title}}</h1>
+            </ion-col>
+            <div [innerHTML]="data.content"> </div>
+
+           </ion-row>
+         </ion-grid>
+
 </ion-content>

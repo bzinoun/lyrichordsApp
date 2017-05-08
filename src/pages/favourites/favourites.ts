@@ -1,24 +1,24 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { Serverdata } from '../serverdata/serverdata';
+import { Response } from '@angular/http';
 
-/**
- * Generated class for the Favourites page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-@IonicPage()
 @Component({
   selector: 'page-favourites',
   templateUrl: 'favourites.html',
+  providers: [Serverdata]
 })
 export class Favourites {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private lyricsData : Serverdata) {}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+lyrics: any[];
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Favourites');
-  }
+serverDataCall(){
+  this.lyricsData.getData().subscribe(
+   (lyrics) => this.lyrics = lyrics,
+   (error) => console.log(error)
+ );
+
+}
 
 }

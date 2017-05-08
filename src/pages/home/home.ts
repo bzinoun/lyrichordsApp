@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Search } from '../search/search';
+import { Details } from '../details/details';
 import { LoadingController } from 'ionic-angular';
 
 @Component({
@@ -10,22 +10,22 @@ import { LoadingController } from 'ionic-angular';
 export class HomePage {
 
   lyricsDatas = [
-    { artist: 'Lord', song: 'Royals', year: '2015' },
-    { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015' },
-    { artist: 'John Legend', song: 'All of me', year: '2016' },
-    { artist: 'Lord', song: 'Royals', year: '2015' },
-    { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015' },
-    { artist: 'John Legend', song: 'All of me', year: '2016' },
-    { artist: 'Lord', song: 'Royals', year: '2015' },
-    { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015' },
-    { artist: 'John Legend', song: 'All of me', year: '2016' },
-    { artist: 'Lord', song: 'Royals', year: '2015' },
-    { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015' },
-    { artist: 'John Legend', song: 'All of me', year: '2016' }
+    { artist: 'Lord', song: 'Royals', year: '2015', favourite: '' },
+    { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015',favourite: '' },
+    { artist: 'John Legend', song: 'All of me', year: '2016', favourite: '' },
+    { artist: 'Lord', song: 'Royals', year: '2015', favourite: '' },
+    { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015', favourite: '' },
+    { artist: 'John Legend', song: 'All of me', year: '2016', favourite: '' },
+    { artist: 'Lord', song: 'Royals', year: '2015', favourite: '' },
+    { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015', favourite: '' },
+    { artist: 'John Legend', song: 'All of me', year: '2016', favourite: '' },
+    { artist: 'Lord', song: 'Royals', year: '2015', favourite: '' },
+    { artist: 'Bruno Mars', song: 'Uptown Funk', year: '2015' , favourite: ''},
+    { artist: 'John Legend', song: 'All of me', year: '2016' , favourite: ''}
   ];
 
   constructor(public navCtrl: NavController, public loadCntrl: LoadingController) {
-
+//, public favStorage: Storage
   }
 
   searchLyrics(tempData) {
@@ -34,13 +34,19 @@ export class HomePage {
     //    duration: 3000
     //  });
     //  loader.present();
-
-    this.navCtrl.push(Search, tempData,
+    this.navCtrl.push(Details, tempData,
       { //third argument is an object defining the animation of the navigation
         direction: 'forward', // default for push is 'forward'
         duration: 1000, // 1 seconds
         easing: 'ease-in'
       });
+  }
+
+
+  makeFav(favData){
+
+console.log(favData.artist + ' clicked!');
+
   }
 
 }

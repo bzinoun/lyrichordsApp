@@ -34,6 +34,8 @@
 		3C5B25D2296D4AC4A6BE6E25 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 839073E604F94E2188A18ACD /* AFURLSessionManager.m */; };
 		781131A5F85C4C41881BB236 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66AFF14C07946C8AA59A35A /* Security.framework */; };
 		8A85594128EE4D188BF741FE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7118181254E64E9B9F5CA3B2 /* SystemConfiguration.framework */; };
+		23B9CC8899E64C27B4E2C44F /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32A6D5CEAE4BDFB6516980 /* SQLitePlugin.m */; };
+		DAF852E2B3244B8E86197DBD /* sqlite3.c in Resources */ = {isa = PBXBuildFile; fileRef = 5D982A23FD454E2892BC0F80 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-DSQLITE_THREADSAFE=1 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_OMIT_DECLTYPE -DSQLITE_OMIT_DEPRECATED -DSQLITE_OMIT_PROGRESS_CALLBACK -DSQLITE_OMIT_SHARED_CACHE -DSQLITE_TEMP_STORE=2 -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_RTREE -DSQLITE_DEFAULT_PAGE_SIZE=1024 -DSQLITE_DEFAULT_CACHE_SIZE=2000"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,10 @@
 		439F79FB3FC2455CA1BD4403 /* AFURLSessionManager.h */ = {isa = PBXFileReference; name = "AFURLSessionManager.h"; path = "cordova-plugin-http/AFURLSessionManager.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		A66AFF14C07946C8AA59A35A /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		7118181254E64E9B9F5CA3B2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		CC32A6D5CEAE4BDFB6516980 /* SQLitePlugin.m */ = {isa = PBXFileReference; name = "SQLitePlugin.m"; path = "cordova-sqlite-storage/SQLitePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		5D982A23FD454E2892BC0F80 /* sqlite3.c */ = {isa = PBXFileReference; name = "sqlite3.c"; path = "cordova-sqlite-storage/sqlite3.c"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2A5B117A8ABB4C07A4E20196 /* SQLitePlugin.h */ = {isa = PBXFileReference; name = "SQLitePlugin.h"; path = "cordova-sqlite-storage/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		D6B69DB4705D4DD081BF82AE /* sqlite3.h */ = {isa = PBXFileReference; name = "sqlite3.h"; path = "cordova-sqlite-storage/sqlite3.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +257,10 @@
 				AED9BB44D9BC4E9A88201058 /* AFURLRequestSerialization.h */,
 				D46301C81E87406AA4D88C98 /* AFURLResponseSerialization.h */,
 				439F79FB3FC2455CA1BD4403 /* AFURLSessionManager.h */,
+				CC32A6D5CEAE4BDFB6516980 /* SQLitePlugin.m */,
+				5D982A23FD454E2892BC0F80 /* sqlite3.c */,
+				2A5B117A8ABB4C07A4E20196 /* SQLitePlugin.h */,
+				D6B69DB4705D4DD081BF82AE /* sqlite3.h */,
 			);
 			name = Plugins;
 			path = "HelloCordova/Plugins";
@@ -382,6 +392,8 @@
 				53E4196B2D914E04BA4FEC3D /* AFURLRequestSerialization.m in Sources */,
 				330CDB1696AD484FB3EB1DC6 /* AFURLResponseSerialization.m in Sources */,
 				3C5B25D2296D4AC4A6BE6E25 /* AFURLSessionManager.m in Sources */,
+				23B9CC8899E64C27B4E2C44F /* SQLitePlugin.m in Sources */,
+				DAF852E2B3244B8E86197DBD /* sqlite3.c in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

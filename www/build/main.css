@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -24319,6 +24320,13 @@ ion-navbar.toolbar {
   opacity: 0.85;
 }
 
+.app-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  color: #ff9900;
+  font-weight: lighter;
+}
+
 .toolbar-md {
   min-height: 75px;
 }
@@ -24331,7 +24339,7 @@ ion-navbar.toolbar {
   background-color: white;
 }
 
-.card-md {
+.card-md-home {
   margin: 0;
   width: 100%;
   border-radius: 0;
@@ -24343,12 +24351,54 @@ ion-navbar.toolbar {
   font-weight: bolder;
 }
 
+.ion-md-heart {
+  color: #fff;
+}
+
+.ion-md-attach:before {
+  color: #ff9900;
+}
+
 .ion-md-home:before {
   color: #ff9900;
 }
 
 .tab-button-text {
   color: #ff9900;
+}
+
+.details-page {
+  background-image: url("../../assets/images/bg5.png");
+  margin: 0;
+  width: 100%;
+}
+
+.details-card {
+  margin: 0;
+  width: 100%;
+  height: inherit;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.details-card ion-card-header .heart-outline {
+  font-size: 35px;
+  color: red;
+}
+
+.details-card ion-card-header .details-title {
+  text-align: left;
+  font-size: 35px;
+  color: red;
+  font-weight: bold;
+}
+
+.details-card .song-details {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: left;
+  color: black;
 }
 
 ion-card {
@@ -24389,15 +24439,14 @@ ion-card .card-subtitle {
   text-transform: uppercase;
 }
 
-.app-title {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5em;
-  color: #ff9900;
-}
-
 .hearT {
   color: white;
-  font-size: 25px;
+  font-size: 28px;
+}
+
+.heartRed {
+  color: red;
+  font-size: 28px;
 }
 
 .style0 {

@@ -43,6 +43,10 @@
                         {
                             "xml": "<feature name=\"CordovaHttpPlugin\"><param name=\"ios-package\" value=\"CordovaHttpPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SQLitePlugin\"><param name=\"ios-package\" value=\"SQLitePlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -76,6 +80,9 @@
         },
         "cordova-plugin-http": {
             "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.lyrichordsapp138205"
         }
     },
     "dependent_plugins": {},
@@ -309,6 +316,14 @@
             "clobbers": [
                 "CordovaHttpPlugin"
             ]
+        },
+        {
+            "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
+            "id": "cordova-sqlite-storage.SQLitePlugin",
+            "pluginId": "cordova-sqlite-storage",
+            "clobbers": [
+                "SQLitePlugin"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -320,6 +335,7 @@
         "ionic-plugin-keyboard": "2.2.1",
         "cordova-plugin-compat": "1.1.0",
         "cordova-plugin-file": "4.3.2",
-        "cordova-plugin-http": "1.2.0"
+        "cordova-plugin-http": "1.2.0",
+        "cordova-sqlite-storage": "2.0.3"
     }
 }
