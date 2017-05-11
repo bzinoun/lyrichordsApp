@@ -13,30 +13,23 @@
 <ion-content padding class="details-page">
 
 <ion-card class="details-card">
-  <ion-card-header>
-
     <ion-grid>
-      <!-- <ion-row>
-        <ion-col>
-          <ion-col col-11></ion-col>
-          <ion-col col-1>
-            <ion-icon name ="ios-heart-outline" class="heart-outline"></ion-icon>
-          </ion-col>
-        </ion-col>
-      </ion-row> -->
-
       <ion-row>
-        <ion-col col-12>
-          <h1 class="details-title">{{ artist }}</h1>
+        <ion-col col-12 class="details-title-bg">
+          <!-- <h1 class="details-title">{{ title }}</h1> -->
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="details-title-bg">
+          <ion-list>
+            <p class="song-details"
+            [innerHTML] = "song" ></p>
+          </ion-list>
         </ion-col>
       </ion-row>
     </ion-grid>
 
-  </ion-card-header>
-
-  <ion-list>
-    <p class="song-details" >{{song}}</p>
-
-  </ion-list>
 </ion-card>
 </ion-content>

@@ -1,47 +1,46 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto');
+
+
 page-details {
+  .details-page {
+    //background: linear-gradient(to bottom right, black, red);
+    background-image: url('../../assets/images/bg5.png');
+    margin: 0;
+    width: 100%;
 
-}
-.details-page {
-  //background: linear-gradient(to bottom right, black, red);
-  background-image: url('../../assets/images/bg5.png');
-  margin: 0;
-  width: 100%;
+  }
 
-}
+  .details-card{
+    margin: 0;
+  	width: 100%;
+    height: inherit;
+  	border-radius: 0;
+  	box-shadow: none;
+  }
 
-.details-card{
-  margin: 0;
-	width: 100%;
-  height: inherit;
-	border-radius: 0;
-	box-shadow: none;
-}
+  .details-card{
 
-.details-card{
-  ion-card-header{
-    .heart-outline{
-      font-size: 35px;
-      color: red;
-    }
+      .details-title{
 
-    .details-title{
+        text-align: left;
+        font-size: 35px;
+        color: red;
+        font-weight: bold;
+      }
+
+    .song-details{
+      margin-left: 20px;
+      margin-bottom: 20px;
+      font-size: 20px;
       text-align: left;
-      font-size: 35px;
-      color: red;
-      font-weight: bold;
+      color:black;
+      font-family: 'Roboto', sans-serif;
+
     }
 
-  }
+    .hr-dash{
 
-  .song-details{
-    margin-left: 20px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    text-align: left;
-    color:black;
-  }
-
-  .hr-dash{
+    }
 
   }
 

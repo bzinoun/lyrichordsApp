@@ -30,7 +30,7 @@ ion-card {
     color: white;
     font-size: 16px;
     font-weight: bold;
-    text-transform: uppercase;
+    // text-transform: uppercase;
   }
 
   .card-subtitle {
@@ -41,8 +41,6 @@ ion-card {
     text-transform: uppercase;
   }
 }
-
-
 
 .hearT {
   color: white;
@@ -56,35 +54,39 @@ ion-card {
 
 .style0 {
   //background: linear-gradient(to bottom right, #e59866, #fbeee6);
-  background-image: url('../../assets/images/bg1.png');
+  background-image: url('../assets/images/bg1.png');
   height: 100%;
   padding-top: 25px;
 }
 
 .style1 {
   //background: linear-gradient(to bottom right, #fff, #000);
-  background-image: url('../../assets/images/bg2.png');
+  background-image: url('../assets/images/bg2.png');
   height: 100%;
   padding-top: 25px;
 }
 
 .style2 {
   //background: linear-gradient(to bottom right, red, green);
-  background-image: url('../../assets/images/bg3.png');
+  background-image: url('../assets/images/bg3.png');
   height: 100%;
   padding-top: 25px;
 }
 
 .style3 {
   //background: linear-gradient(to bottom right, yellow, cyan);
-  background-image: url('../../assets/images/bg4.png');
+  background-image: url('../assets/images/bg4.png');
   height: 100%;
   padding-top: 25px;
 }
 
 .style4 {
   //background: linear-gradient(to bottom right, black, red);
-  background-image: url('../../assets/images/bg5.png');
+  background-image: url('../assets/images/bg5.png');
   height: 100%;
   padding-top: 25px;
+}
+
+#card-body {
+  margin: 0;
 }
