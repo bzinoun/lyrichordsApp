@@ -4,7 +4,7 @@
 page-details {
   .details-page {
     //background: linear-gradient(to bottom right, black, red);
-    background-image: url('../../assets/images/bg5.png');
+    background-image: url('../assets/images/bg5.png');
     margin: 0;
     width: 100%;
 
@@ -22,8 +22,7 @@ page-details {
 
       .details-title{
 
-        text-align: left;
-        font-size: 35px;
+        font-size: 25px;
         color: red;
         font-weight: bold;
       }
@@ -32,7 +31,6 @@ page-details {
       margin-left: 20px;
       margin-bottom: 20px;
       font-size: 20px;
-      text-align: left;
       color:black;
       font-family: 'Roboto', sans-serif;
 
