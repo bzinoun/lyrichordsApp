@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Details } from '../details/details';
 import { LoadingController } from 'ionic-angular';
-import { Serverdata } from '../serverdata/serverdata';
 import { Response } from '@angular/http';
 import { StorageService } from '../../services/storageservice';
 import { DataService } from '../../services/dataservice';
@@ -16,7 +15,7 @@ export class HomePage implements OnInit {
   public lyrics: any[];
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    private lyricsData: Serverdata,
+    private lyricsData: DataService,
     public loadCntrl: LoadingController,
     public storeIt: StorageService) { }
 
