@@ -14,13 +14,14 @@
 
 <ion-content padding>
 
-  <ion-list *ngFor="let list of lists">
+  <ion-list *ngFor="let list of lists; let i = index">
     <ion-item-sliding>
-      <ion-item>
+      <ion-item (click) = "searchLyrics(list)">
         <h2>{{list.title}}</h2>
       </ion-item>
       <ion-item-options side="right">
-        <button ion-button color="danger">
+        <button ion-button color="danger"
+        (click) = "onDelete(i)">
           <ion-icon name="md-trash"></ion-icon>
         </button>
       </ion-item-options>

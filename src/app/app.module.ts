@@ -12,7 +12,6 @@ import { Search } from '../pages/search/search';
 import { Details } from '../pages/details/details';
 import { Favourites } from '../pages/favourites/favourites';
 import { Tabs } from '../pages/tabs/tabs';
-import { Serverdata } from '../pages/serverdata/serverdata';
 import { StorageService } from '../services/storageservice';
 import { DataService } from '../services/dataservice';
 
@@ -43,7 +42,6 @@ import { DataService } from '../services/dataservice';
   providers: [
     StatusBar,
     SplashScreen,
-    Serverdata,
     StorageService,
     DataService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

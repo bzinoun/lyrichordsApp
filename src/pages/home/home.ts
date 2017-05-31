@@ -25,42 +25,37 @@ export class HomePage implements OnInit {
   }
 
   //http data from service fetch here
+
   serverDataCall() {
     this.lyricsData.getData().subscribe(
       (lyrics) => this.lyrics = lyrics,
       (error) => console.log(error)
     );
   }
+  //end of http calls
 
-
-  //Favourites function
+  // Make cards favourite here
   makeFav(data) {
   this.storeIt.storeItem(data.title, data.content);
   this.favClickedStatus();
   }
 
-
-  //clicked status function
-  favClickedStatus() {
-    let loader = this.loadCntrl.create({
-      content: "Saving..",
-      duration: 300
-    });
-    loader.present();
-  }
-
+  // favourite ends here
 
 
   //Navigation works here
   searchLyrics(tempData) {
     this.navCtrl.push(Details, tempData,
-      { //third argument is an object defining the animation of the navigation
-        direction: 'forward', // default for push is 'forward'
-        duration: 200, // 1 seconds
+      {
+        direction: 'forward',
+        duration: 200,
         easing: 'ease-in'
       });
   }
 
+//-----------------------------
+//All timer functions from here
+//-----------------------------
 
   //loading timer function
   loadingTimer() {
@@ -70,5 +65,16 @@ export class HomePage implements OnInit {
     });
     loader.present();
   }
+
+
+    //clicked status function
+    favClickedStatus() {
+      let loader = this.loadCntrl.create({
+        content: "Saving..",
+        duration: 300
+      });
+      loader.present();
+    }
+
   //ends here
 }

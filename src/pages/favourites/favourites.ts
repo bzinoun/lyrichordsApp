@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Serverdata } from '../serverdata/serverdata';
+
 import { Response } from '@angular/http';
 import { LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { StorageService } from '../../services/storageservice';
 import { Lyrics } from '../../models/lyrics';
+import { DataService } from '../../services/dataservice';
+import { Details } from '../details/details';
 
 @Component({
   selector: 'page-favourites',
   templateUrl: 'favourites.html',
-  providers: [Serverdata]
+  providers: [DataService]
 })
 export class Favourites implements OnInit {
   lists : Lyrics[] =[];
@@ -18,7 +20,6 @@ export class Favourites implements OnInit {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private lyricsData: Serverdata,
               public loadCntrl: LoadingController,
               private getFav : StorageService) { }
 
@@ -29,5 +30,24 @@ export class Favourites implements OnInit {
     );
 
   }
+// Delete item from favourite starts here
+
+  onDelete(index) {
+    this.getFav.deleteItem(index);
+  }
+
+// Delete items from favourites ends here
+
+// Navigate to favourite content froom here
+
+  searchLyrics(tempData) {
+    this.navCtrl.push(Details, tempData,
+      {
+        direction: 'forward',
+        duration: 200,
+        easing: 'ease-in'
+      });
+  }
+//end of details function here
 
 }
