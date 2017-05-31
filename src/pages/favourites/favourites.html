@@ -1,9 +1,4 @@
-<!--
-  Generated template for the Favourites page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -19,15 +14,16 @@
 
 <ion-content padding>
 
-<!-- <button ion-button (click) = "serverDataCall()" > get lyrics</button> -->
-<ion-grid *ngIf="lyrics && lyrics.items">
-           <ion-row *ngFor="let data of lyrics.items">
-            <ion-col col-12>
-             <h1>{{data.title}}</h1>
-            </ion-col>
-            <!-- <div [innerHTML]="data.content"> </div> -->
-
-           </ion-row>
-         </ion-grid>
-
+  <ion-list *ngFor="let list of lists">
+    <ion-item-sliding>
+      <ion-item>
+        <h2>{{list.title}}</h2>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="danger">
+          <ion-icon name="md-trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>

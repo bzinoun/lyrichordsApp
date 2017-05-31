@@ -24387,8 +24387,7 @@ page-details .details-card {
 }
 
 page-details .details-card .details-title {
-  text-align: left;
-  font-size: 35px;
+  font-size: 25px;
   color: red;
   font-weight: bold;
 }
@@ -24397,7 +24396,6 @@ page-details .details-card .song-details {
   margin-left: 20px;
   margin-bottom: 20px;
   font-size: 20px;
-  text-align: left;
   color: black;
   font-family: 'Roboto', sans-serif;
 }

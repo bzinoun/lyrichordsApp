@@ -4,7 +4,8 @@ import { Details } from '../details/details';
 import { LoadingController } from 'ionic-angular';
 import { Serverdata } from '../serverdata/serverdata';
 import { Response } from '@angular/http';
-import { Storage } from '@ionic/storage';
+import { StorageService } from '../../services/storageservice';
+import { DataService } from '../../services/dataservice';
 
 @Component({
   selector: 'page-home',
@@ -17,7 +18,7 @@ export class HomePage implements OnInit {
     public navParams: NavParams,
     private lyricsData: Serverdata,
     public loadCntrl: LoadingController,
-    private storage: Storage) { }
+    public storeIt: StorageService) { }
 
   ngOnInit() {
     this.serverDataCall();
@@ -31,14 +32,15 @@ export class HomePage implements OnInit {
       (error) => console.log(error)
     );
   }
-  //loading timer function
-  loadingTimer() {
-    let loader = this.loadCntrl.create({
-      content: "Please wait...",
-      duration: 1000
-    });
-    loader.present();
+
+
+  //Favourites function
+  makeFav(data) {
+  this.storeIt.storeItem(data.title, data.content);
+  this.favClickedStatus();
   }
+
+
   //clicked status function
   favClickedStatus() {
     let loader = this.loadCntrl.create({
@@ -47,6 +49,9 @@ export class HomePage implements OnInit {
     });
     loader.present();
   }
+
+
+
   //Navigation works here
   searchLyrics(tempData) {
     this.navCtrl.push(Details, tempData,
@@ -57,11 +62,14 @@ export class HomePage implements OnInit {
       });
   }
 
-  //Favourites function
-  makeFav(favData) {
-    console.log(favData.title + ' clicked!');
-    this.favClickedStatus();
-  }
 
+  //loading timer function
+  loadingTimer() {
+    let loader = this.loadCntrl.create({
+      content: "Please wait...",
+      duration: 1000
+    });
+    loader.present();
+  }
   //ends here
 }

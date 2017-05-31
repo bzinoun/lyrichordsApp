@@ -13,6 +13,8 @@ import { Details } from '../pages/details/details';
 import { Favourites } from '../pages/favourites/favourites';
 import { Tabs } from '../pages/tabs/tabs';
 import { Serverdata } from '../pages/serverdata/serverdata';
+import { StorageService } from '../services/storageservice';
+import { DataService } from '../services/dataservice';
 
  @NgModule({
   declarations: [
@@ -27,10 +29,7 @@ import { Serverdata } from '../pages/serverdata/serverdata';
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot({
-      name: '__mydb',
-        driverOrder: ['indexeddb', 'sqlite', 'websql']
-    })
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,7 +44,9 @@ import { Serverdata } from '../pages/serverdata/serverdata';
     StatusBar,
     SplashScreen,
     Serverdata,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    StorageService,
+    DataService,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
 
   ]
 })
