@@ -1,6 +1,5 @@
 {
   "name": "lyrichordsApp",
   "app_id": "b1f37a7e",
-  "v2": true,
-  "typescript": true
+  "type": "ionic-angular"
 }
