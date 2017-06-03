@@ -27,6 +27,8 @@ export class HomePage implements OnInit {
   //http data from service fetch here
 
   serverDataCall() {
+
+    // this.lyricsData.testCall();
     this.lyricsData.getData().subscribe(
       (lyrics) => this.lyrics = lyrics,
       (error) => console.log(error)

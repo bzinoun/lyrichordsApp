@@ -5,10 +5,15 @@ import 'rxjs/Rx';
 @Injectable()
 
 export class DataService {
-  private blogUrl: any = 'https://www.googleapis.com/blogger/v3/blogs/7768038621167494812/posts?fetchImages=false&status=live&maxResults=500&key=AIzaSyBp0a7ZCTaHTcAmo-bcnIYK1mpWL3yYWMY';
+  private blogUrl: any = 'https://www.googleapis.com/blogger/v3/blogs/6176425095225385540/posts?fetchImages=false&status=live&maxResults=500&key=AIzaSyBp0a7ZCTaHTcAmo-bcnIYK1mpWL3yYWMY';
+  public lyrics : any[];
 
-
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+    this.getData().subscribe(
+      (lyrics) => this.lyrics = lyrics.items,
+      (error) => console.log(error)
+    );
+   }
 
   getData() {
     return this.http.get(this.blogUrl)
@@ -19,4 +24,13 @@ export class DataService {
       }
       );
   }
+
+
+
+  filterItems(searchTerm){
+  	    return this.lyrics.filter((item) => {
+  	    	return item.content.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+  	    });
+
+  	}
 }
