@@ -36,8 +36,16 @@ export class HomePage implements OnInit {
 
   // Make cards favourite here
   makeFav(data) {
-  this.storeIt.storeItem(data.title, data.content);
-  this.favClickedStatus();
+    if(this.storeIt.checkItem(data.id) === false){
+      this.storeIt.storeItem(data.title, data.content, data.id);
+      this.favClickedStatus();
+    }
+      else {
+        this.alreadySaved();
+      }
+  //
+  // this.storeIt.checkItem(data.id);
+  // this.storeIt.storeItem(data.title, data.content, data.id);
   }
 
   // favourite ends here
@@ -71,7 +79,15 @@ export class HomePage implements OnInit {
     favClickedStatus() {
       let loader = this.loadCntrl.create({
         content: "Saving..",
-        duration: 300
+        duration: 500
+      });
+      loader.present();
+    }
+//already saved warning
+    alreadySaved() {
+      let loader = this.loadCntrl.create({
+        content: "Already saved!",
+        duration: 500
       });
       loader.present();
     }

@@ -12,12 +12,11 @@ export class StorageService {
   constructor(private storage: Storage) { }
 
 
-
   // Favourite data start storing here
 
-  storeItem(title: any, content: any) {
+  storeItem(title: any, content: any, id : number) {
     //    console.log('from service', title, content);
-    const list = new Lyrics(title, content);
+    const list = new Lyrics(title, content, id);
     this.lists.push(list);
     this.storage.set('lists', this.lists)
       .then()
@@ -46,6 +45,15 @@ export class StorageService {
   }
   //end favourite fetching
 
+//check item starts here!
+checkItem(id :number){
+
+return this.lists.find(list => list.id == id) ? true : false;
+
+}
+//check item ends here!
+
+//delete favourite starts here
   deleteItem(index: number) {
     const list = this.lists[index];
     this.lists.splice(index, 1);
@@ -56,7 +64,6 @@ export class StorageService {
     .catch(
       err => console.log(err)
     );
-    // console.log(index, ' item is deleted!');
   }
-
+//favourite delete ends here
 }
