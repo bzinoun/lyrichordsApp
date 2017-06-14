@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
+import { Network } from '@ionic-native/network';
+
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -14,6 +16,7 @@ import { Favourites } from '../pages/favourites/favourites';
 import { Tabs } from '../pages/tabs/tabs';
 import { StorageService } from '../services/storageservice';
 import { DataService } from '../services/dataservice';
+
 
  @NgModule({
   declarations: [
@@ -38,14 +41,14 @@ import { DataService } from '../services/dataservice';
     Favourites,
     Details,
     Tabs
-    ],
+      ],
   providers: [
     StatusBar,
     SplashScreen,
     StorageService,
     DataService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Network
   ]
 })
 export class AppModule {}

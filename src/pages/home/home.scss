@@ -43,10 +43,24 @@ ion-card {
 }
 
 .hearT {
-  color: white;
-  font-size: 28px;
+  // color: white;
+  font-size: 30px;
+  color : white;
 }
 
+.hearT:active
+{
+    // box-shadow: 0px 0px 150px #000000;
+    // z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(2.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(2.5);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(2.5);
+    transition: all 200ms ease-in;
+    transform: scale(2.5);
+}
 .heartRed {
   color: red;
   font-size: 28px;

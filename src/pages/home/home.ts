@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { Details } from '../details/details';
 import { LoadingController } from 'ionic-angular';
 import { Response } from '@angular/http';
 import { StorageService } from '../../services/storageservice';
 import { DataService } from '../../services/dataservice';
+import { Network } from '@ionic-native/network';
+import { ConnectionPage } from '../connection/connection';
 
 @Component({
   selector: 'page-home',
@@ -13,18 +15,25 @@ import { DataService } from '../../services/dataservice';
 export class HomePage implements OnInit {
 
   public lyrics: any[];
-  constructor(public navCtrl: NavController,
+  constructor(private network: Network,
+    public navCtrl: NavController,
     public navParams: NavParams,
     private lyricsData: DataService,
     public loadCntrl: LoadingController,
-    public storeIt: StorageService) { }
+    public storeIt: StorageService,
+    public toast: ToastController) { }
 
   ngOnInit() {
     this.serverDataCall();
     this.loadingTimer();
   }
 
-  //http data from service fetch here
+  // ionViewDidEnter() {
+  //   this.network.onConnect().subscribe(data => console.log('It works: connected!'), error => console.log('error occured!'));
+  //   this.network.onDisconnect().subscribe(data => this.connectionFailed(), error => console.log('error occured!'));
+  //
+  // }
+  // //http data from service fetch here
 
   serverDataCall() {
 
@@ -38,16 +47,15 @@ export class HomePage implements OnInit {
 
   // Make cards favourite here
   makeFav(data) {
-    if(this.storeIt.checkItem(data.id) === false){
+    if (this.storeIt.checkItem(data.id) === false) {
       this.storeIt.storeItem(data.title, data.content, data.id);
       this.favClickedStatus();
     }
-      else {
-        this.alreadySaved();
-      }
-  //
-  // this.storeIt.checkItem(data.id);
-  // this.storeIt.storeItem(data.title, data.content, data.id);
+    else if(this.storeIt.checkItem(data.id) === true) {
+      this.storeIt.getIndexOfAlreadySaved({title: data.title, content: data.content, id: data.id});
+      this.alreadySaved();
+    }
+
   }
 
   // favourite ends here
@@ -63,9 +71,18 @@ export class HomePage implements OnInit {
       });
   }
 
-//-----------------------------
-//All timer functions from here
-//-----------------------------
+  connectionFailed() {
+    this.navCtrl.push(ConnectionPage,
+      {
+        direction: 'forward',
+        duration: 200,
+        easing: 'ease-in'
+      });
+  }
+
+  //-----------------------------
+  //All timer functions from here
+  //-----------------------------
 
   //loading timer function
   loadingTimer() {
@@ -77,22 +94,29 @@ export class HomePage implements OnInit {
   }
 
 
-    //clicked status function
-    favClickedStatus() {
-      let loader = this.loadCntrl.create({
-        content: "Saving..",
-        duration: 500
-      });
-      loader.present();
-    }
-//already saved warning
-    alreadySaved() {
-      let loader = this.loadCntrl.create({
-        content: "Already saved!",
-        duration: 500
-      });
-      loader.present();
-    }
+  //clicked status function
+  favClickedStatus() {
+    let toast = this.toast.create({
+      message: 'Added to Favourites!',
+      duration: 2000,
+      position: 'bottom'
+    });
+    toast.present();
+  }
+
+  //already saved warning
+  alreadySaved() {
+    let toast = this.toast.create({
+      message: 'Removed from Favourites!',
+      duration: 2000,
+      position: 'bottom'
+    });
+    toast.present();
+  }
+
+
+
+
 
   //ends here
 }

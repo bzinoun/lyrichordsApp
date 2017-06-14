@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core'
 export class StorageService {
 
   private lists: Lyrics[] = [];
-
+  public itemPosition : number =0;
   constructor(private storage: Storage) { }
 
 
@@ -49,9 +49,16 @@ export class StorageService {
 checkItem(id :number){
 
 return this.lists.find(list => list.id == id) ? true : false;
-
 }
 //check item ends here!
+
+getIndexOfAlreadySaved(item : any){
+// console.log('item removed from service', itemId);
+this.itemPosition = this.lists.findIndex(list => list.id === item.id );
+//findindex is used only in array of objects where we need to iterate with a callback function
+console.log('removed item pos: ', this.itemPosition);
+this.deleteItem(this.itemPosition);
+}
 
 //delete favourite starts here
   deleteItem(index: number) {

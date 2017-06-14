@@ -24438,8 +24438,19 @@ ion-card .card-subtitle {
 }
 
 .hearT {
+  font-size: 30px;
   color: white;
-  font-size: 28px;
+}
+
+.hearT:active {
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(2.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(2.5);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(2.5);
+  transition: all 200ms ease-in;
+  transform: scale(2.5);
 }
 
 .heartRed {
